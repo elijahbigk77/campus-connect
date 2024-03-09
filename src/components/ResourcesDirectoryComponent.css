@@ -1,0 +1,25 @@
+/* ResourcesDirectoryComponent.css */
+.resources-directory-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .resources-directory-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .resource-list h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .resource-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resource-list li {
+    margin-bottom: 5px;
+  }
+  

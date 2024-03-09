@@ -1,0 +1,35 @@
+/* JobInternshipComponent.css */
+.job-internship-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .job-internship-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .listing {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .listing:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected-listing {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  

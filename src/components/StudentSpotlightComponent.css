@@ -1,0 +1,22 @@
+/* StudentSpotlightComponent.css */
+.student-spotlight-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .student-spotlight-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .student {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  

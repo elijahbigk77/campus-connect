@@ -1,0 +1,20 @@
+/* StudyTipsComponent.css */
+.study-tips-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .study-tips-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .study-tips-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .study-tips-list li {
+    margin-bottom: 10px;
+  }
+  

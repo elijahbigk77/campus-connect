@@ -1,0 +1,25 @@
+/* InteractiveMapComponent.css */
+.interactive-map-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .interactive-map-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .map {
+    position: relative;
+  }
+  
+  .info-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

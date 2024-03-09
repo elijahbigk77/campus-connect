@@ -1,0 +1,48 @@
+/* MultimediaComponent.css */
+.multimedia-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .multimedia-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .item {
+    cursor: pointer;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .item video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .selected-item {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .selected-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .selected-item video {
+    width: 100%;
+    height: auto;
+  }
+  

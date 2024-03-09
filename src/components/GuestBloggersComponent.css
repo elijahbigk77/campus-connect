@@ -1,0 +1,35 @@
+/* GuestBloggersComponent.css */
+.guest-bloggers-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .guest-bloggers-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .blog-post {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .blog-post:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected-post {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  

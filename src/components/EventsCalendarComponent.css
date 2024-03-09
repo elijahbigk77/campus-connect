@@ -1,0 +1,24 @@
+/* EventsCalendarComponent.css */
+.events-calendar-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .event-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-item {
+    margin-bottom: 10px;
+  }
+  
+  .event-date {
+    font-weight: bold;
+  }
+  
+  .event-details {
+    margin-left: 10px;
+  }
+  

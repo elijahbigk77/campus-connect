@@ -1,0 +1,30 @@
+/* SocialIntegrationComponent.css */
+.social-integration-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .social-integration-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-links a {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  .social-links a:hover {
+    background-color: #f0f0f0;
+  }
+  
