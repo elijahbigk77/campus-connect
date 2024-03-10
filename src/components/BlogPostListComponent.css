@@ -1,0 +1,34 @@
+/* BlogPostListComponent.css */
+.blog-post-list {
+    margin-top: 20px;
+  }
+  
+  .blog-post-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post-list form {
+    text-align: center;
+  }
+  
+  .blog-post-list input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .blog-post-list button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .blog-post-list button:hover {
+    background-color: #0056b3;
+  }
+  
