@@ -51,7 +51,7 @@ const BlogPostListComponent = () => {
         <button type="submit">Submit</button>
       </form>
       <ul>
-        {blogPosts.map((post, index) => (
+        {blogPosts.slice(0).reverse().map((post, index) => ( // Reverse the array before mapping
           <li key={index}>
             {editingIndex === index ? (
               <React.Fragment>
@@ -59,8 +59,10 @@ const BlogPostListComponent = () => {
                   value={editedText}
                   onChange={(e) => setEditedText(e.target.value)}
                 />
-                <button onClick={() => handleSave(index)}>Save</button>
-                <button onClick={() => handleDelete(index)}>Delete</button>
+                <div className="edit-buttons">
+                  <button className="save-button" onClick={() => handleSave(index)}>Save</button>
+                  <button className="delete-button" onClick={() => handleDelete(index)}>Delete</button>
+                </div>
               </React.Fragment>
             ) : (
               <React.Fragment>
