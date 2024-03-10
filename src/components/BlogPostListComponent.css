@@ -1,34 +1,87 @@
 /* BlogPostListComponent.css */
 .blog-post-list {
-    margin-top: 20px;
-  }
-  
-  .blog-post-list h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .blog-post-list form {
-    text-align: center;
-  }
-  
-  .blog-post-list input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .blog-post-list button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .blog-post-list button:hover {
-    background-color: #0056b3;
-  }
-  
+  margin-top: 20px;
+  text-align: center;
+}
+
+.blog-post-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-post-list form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-post-list input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.blog-post-list button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-post-list button:hover {
+  background-color: #0056b3;
+}
+
+.blog-post-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column-reverse; /* Display items in a column, starting from the bottom */
+}
+
+.blog-post-list li {
+  background-color: #fff;
+  border: 1px solid #0091ff;
+  border-radius: 7px;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin-left: auto; /* Center the display box */
+  margin-right: auto; /* Center the display box */
+  position: relative; /* Relative positioning for the overlay */
+}
+
+.blog-post-list li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 174, 245, 0.5); /* Light overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.blog-post-list li:hover::after {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.blog-post-list li p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}

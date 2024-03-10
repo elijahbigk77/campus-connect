@@ -9,7 +9,8 @@ const BlogPostListComponent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputText.trim() !== '') {
-      setBlogPosts([...blogPosts, inputText]);
+      const timestamp = new Date().toLocaleString(); // Get current date and time
+      setBlogPosts([{ text: inputText, timestamp }, ...blogPosts]); // Add new post with timestamp
       setInputText('');
     }
   };
@@ -27,8 +28,11 @@ const BlogPostListComponent = () => {
         <button type="submit">Submit</button>
       </form>
       <ul>
-        {blogPosts.map((post, index) => (
-          <li key={index}>{post}</li>
+        {blogPosts.slice(0).reverse().map((post, index) => ( // Reverse the order of blogPosts
+          <li key={index}>
+            <p>{post.text}</p>
+            <span className="timestamp">{post.timestamp}</span> {/* Display timestamp */}
+          </li>
         ))}
       </ul>
     </div>
