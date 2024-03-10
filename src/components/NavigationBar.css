@@ -37,6 +37,7 @@ ul {
 
 li {
   margin-right: 20px;
+  position: relative;
 }
 
 a {
@@ -49,26 +50,36 @@ a:hover {
   text-decoration: underline;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
+.dropdown{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
 }
 
-.search-bar input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
+.dropdown:hover {
+  text-decoration: underline;
+  cursor:pointer;
 }
 
-.search-bar button {
-  padding: 8px 12px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #007bff;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-.search-bar button:hover {
-  background-color: #f0f0f0;
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #ddd;
 }

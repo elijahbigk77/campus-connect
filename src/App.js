@@ -1,4 +1,5 @@
-import React from 'react';
+// App.js remains unchanged
+import React, { useState, useEffect } from 'react';
 import BlogPostListComponent from './components/BlogPostListComponent';
 import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
@@ -14,21 +15,38 @@ import MultimediaComponent from './components/MultimediaComponent';
 import SocialIntegrationComponent from './components/SocialIntegrationComponent';
 
 const App = () => {
+  // State to track current page/component to render
+  const [currentPage, setCurrentPage] = useState('');
+
+  // Use useEffect to update currentPage based on URL pathname
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    setCurrentPage(pathname);
+  }, []);
+
+  // Function to render the appropriate component based on currentPage
+  const renderComponent = () => {
+    switch (currentPage) {
+      case '/': return <BlogPostListComponent />;
+      case '/quiz': return <QuizPollComponent />;
+      case '/events': return <EventsCalendarComponent />;
+      case '/students': return <StudentSpotlightComponent />;
+      case '/resources': return <ResourcesDirectoryComponent />;
+      case '/study': return <StudyTipsComponent />;
+      case '/guestbloggers': return <GuestBloggersComponent />;
+      case '/map': return <InteractiveMapComponent />;
+      case '/jobs': return <JobInternshipComponent />;
+      case '/multimedia': return <MultimediaComponent />;
+      case '/social': return <SocialIntegrationComponent />;
+      default: return null;
+    }
+  };
+
   return (
     <div>
       <NavigationBar />
       <main>
-        <BlogPostListComponent />
-        <QuizPollComponent />
-        <EventsCalendarComponent />
-        <StudentSpotlightComponent />
-        <ResourcesDirectoryComponent />
-        <StudyTipsComponent />
-        <GuestBloggersComponent />
-        <InteractiveMapComponent />
-        <JobInternshipComponent />
-        <MultimediaComponent />
-        <SocialIntegrationComponent />
+        {renderComponent()} {/* Render the appropriate component */}
       </main>
       <Footer />
     </div>
