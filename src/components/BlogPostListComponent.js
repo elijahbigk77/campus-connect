@@ -5,6 +5,8 @@ import './BlogPostListComponent.css';
 const BlogPostListComponent = () => {
   const [inputText, setInputText] = useState('');
   const [blogPosts, setBlogPosts] = useState([]);
+  const [editingIndex, setEditingIndex] = useState(null); // Track the index of the post being edited
+  const [editedText, setEditedText] = useState(''); // Track the edited text
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +15,27 @@ const BlogPostListComponent = () => {
       setBlogPosts([{ text: inputText, timestamp }, ...blogPosts]); // Add new post with timestamp
       setInputText('');
     }
+  };
+
+  const handleEdit = (index, text) => {
+    setEditingIndex(index); // Set editingIndex to the index of the post being edited
+    setEditedText(text); // Set editedText to the current post text
+  };
+
+  const handleSave = (index) => {
+    const updatedPosts = [...blogPosts];
+    updatedPosts[index].text = editedText;
+    setBlogPosts(updatedPosts);
+    setEditingIndex(null); // Reset editingIndex
+    setEditedText(''); // Reset editedText
+  };
+
+  const handleDelete = (index) => {
+    const updatedPosts = [...blogPosts];
+    updatedPosts.splice(index, 1);
+    setBlogPosts(updatedPosts);
+    setEditingIndex(null); // Reset editingIndex
+    setEditedText(''); // Reset editedText
   };
 
   return (
@@ -28,10 +51,24 @@ const BlogPostListComponent = () => {
         <button type="submit">Submit</button>
       </form>
       <ul>
-        {blogPosts.slice(0).reverse().map((post, index) => ( // Reverse the order of blogPosts
+        {blogPosts.map((post, index) => (
           <li key={index}>
-            <p>{post.text}</p>
-            <span className="timestamp">{post.timestamp}</span> {/* Display timestamp */}
+            {editingIndex === index ? (
+              <React.Fragment>
+                <textarea
+                  value={editedText}
+                  onChange={(e) => setEditedText(e.target.value)}
+                />
+                <button onClick={() => handleSave(index)}>Save</button>
+                <button onClick={() => handleDelete(index)}>Delete</button>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>{post.text}</p>
+                <span className="timestamp">{post.timestamp}</span>
+                <button className="edit-button" onClick={() => handleEdit(index, post.text)}>Edit</button>
+              </React.Fragment>
+            )}
           </li>
         ))}
       </ul>

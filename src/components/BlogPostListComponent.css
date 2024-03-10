@@ -23,7 +23,7 @@
 }
 
 .blog-post-list button {
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-size: 16px;
   background-color: #007bff;
   color: #fff;
@@ -57,17 +57,6 @@
   position: relative; /* Relative positioning for the overlay */
 }
 
-.blog-post-list li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 174, 245, 0.5); /* Light overlay */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition */
-}
 
 .blog-post-list li:hover::after {
   opacity: 1; /* Show overlay on hover */
@@ -83,5 +72,15 @@
     color: #999;
     position: absolute;
     bottom: 5px;
+    left: 5px;
+}
+
+.edit-button {
+    position: absolute;
+    top: 7px;
     right: 5px;
+    
+    height: 35px;
+    text-align: center;
+    border-radius: 7px;
 }
